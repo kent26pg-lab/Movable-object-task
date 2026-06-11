@@ -7,3 +7,16 @@ function clamp(val, min, max) {
   return val < min ? min : val > max ? max : val;
 }
 
+function move(newX, newY) {
+  x = clamp(newX, 0, window.innerWidth - BOX);
+  y = clamp(newY, 0, window.innerHeight - BOX);
+  box.style.left = x + 'px';
+  box.style.top  = y + 'px';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowUp')    { e.preventDefault(); move(x, y - STEP); }
+  if (e.key === 'ArrowDown')  { e.preventDefault(); move(x, y + STEP); }
+  if (e.key === 'ArrowLeft')  { e.preventDefault(); move(x - STEP, y); }
+  if (e.key === 'ArrowRight') { e.preventDefault(); move(x + STEP, y); }
+});
