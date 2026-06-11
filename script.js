@@ -20,3 +20,7 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft')  { e.preventDefault(); move(x - STEP, y); }
   if (e.key === 'ArrowRight') { e.preventDefault(); move(x + STEP, y); }
 });
+
+document.addEventListener('click', e => {
+  move(e.clientX - BOX / 2, e.clientY - BOX / 2);
+});
