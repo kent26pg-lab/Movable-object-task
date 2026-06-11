@@ -1,6 +1,10 @@
+// henter boksen fra HTML
 const box = document.getElementById('movable-box');
+// her setter forteller jeg koden hvor bredd og høy boksen er
 const BOX = 48;
+// Hvor mange pixler boksen skal flytte på seg når man bruker piltastene
 const STEP = 24;
+// Posisjonen til boksen hver gang man starter funskjonen
 let x = 0, y = 0;
 
 function clamp(val, min, max) {
@@ -15,10 +19,10 @@ function move(newX, newY) {
 }
 
 document.addEventListener('keydown', e => {
-  if (e.key === 'ArrowUp')    { e.preventDefault(); move(x, y - STEP); }
-  if (e.key === 'ArrowDown')  { e.preventDefault(); move(x, y + STEP); }
-  if (e.key === 'ArrowLeft')  { e.preventDefault(); move(x - STEP, y); }
-  if (e.key === 'ArrowRight') { e.preventDefault(); move(x + STEP, y); }
+  if (e.key === 'ArrowUp' || e.key === 'w' || e.key === `W`) { e.preventDefault(); move(x, y - STEP); }
+  if (e.key === 'ArrowDown' || e.key === `s` || e.key === `S`)  { e.preventDefault(); move(x, y + STEP); }
+  if (e.key === 'ArrowLeft' || e.key === `a` || e.key === `A`)  { e.preventDefault(); move(x - STEP, y); }
+  if (e.key === 'ArrowRight' || e.key === `d` || e.key === `D`) { e.preventDefault(); move(x + STEP, y); }
 });
 
 document.addEventListener('click', e => {
