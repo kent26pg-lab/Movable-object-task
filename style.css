@@ -6,12 +6,14 @@
 }
 
 body {
-    overflow: hidden;
+    background-image: url(./images/space.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 #movable-box {
   position: absolute;
-  width: 48px;
-  height: 48px;
-  background: #534AB7;
+  width: 100px;
+  height: 100px;
+  background-color:deepskyblue;
 }
