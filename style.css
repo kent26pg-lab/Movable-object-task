@@ -1,19 +1,18 @@
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    cursor: crosshair;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url(./images/space.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
+  background-image: url(./images/space.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #movable-box {
   position: absolute;
   width: 100px;
   height: 100px;
-  background-color:deepskyblue;
+  background-color: deepskyblue;
 }

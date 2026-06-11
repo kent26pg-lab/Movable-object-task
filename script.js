@@ -8,8 +8,8 @@ const STEP = 24;
 let x = 0, y = 0;
 
 // Tar imot et tall (val) og holder det innenfor min og max.
-// Returnerer min hvis for liten, max hvis for stor, ellers val uendret.
 function clamp(val, min, max) {
+  // Returnerer min hvis for liten, max hvis for stor, ellers val uendret.
   return val < min ? min : val > max ? max : val;
 }
 
